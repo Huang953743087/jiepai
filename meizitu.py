@@ -138,8 +138,12 @@ def main(url,i):
 
 
 if __name__ == '__main__':
+    #url为最初地址
     url = 'http://www.mm131.com/qingchun/'
-    for i in range(13, 32):
+    #为结束页数
+    end_list = 32
+    main(url, 1)
+    for i in range(2, end_list):
         url_end = ('list_1_%d.html' %i )
         url = urljoin(url, url_end)
         main(url,i)
